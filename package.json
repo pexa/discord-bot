@@ -11,7 +11,7 @@
         "node-cache": "^4.1.1"
     },
     "scripts": {
-        "format": "prettier --single-quote --trailing-comma=es5 --tab-width=2 --print-width=80 --no-semi --write '{bot,lib,pages,hooks}/**/*.?(js|jsx|scss)'",
+        "format": "prettier --single-quote --trailing-comma=es5 --tab-width=2 --print-width=80 --no-semi --write 'bot/**/*.?(js|jsx|scss)'",
         "build": "babel bot -d dist",
         "prod": "babel bot -d dist & node dist/bot.js"
     },
