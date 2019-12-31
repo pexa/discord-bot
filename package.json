@@ -1,0 +1,29 @@
+{
+    "dependencies": {
+        "bitcoin-core": "^1.2.0",
+        "config": "^1.27.0",
+        "console-stamp": "^0.2.6",
+        "discord.js": "^11.2.1",
+        "dotenv": "^8.2.0",
+        "mongodb": "^3.0.2",
+        "needle": "^2.0.1",
+        "node-cache": "^4.1.1"
+    },
+    "scripts": {
+        "format": "prettier --single-quote --trailing-comma=es5 --tab-width=2 --print-width=80 --no-semi --write '{bot,lib,pages,hooks}/**/*.?(js|jsx|scss)'",
+        "build": "babel bot -d dist",
+        "prod": "babel bot -d dist & node dist/bot.js"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.6.5",
+        "husky": "^0.14.3",
+        "prettier": "1.8.1"
+    },
+    "name": "pexabot",
+    "version": "0.0.1",
+    "description": "Infomation Bot for Pexa Coin Discord",
+    "main": "bot.js",
+    "repository": "https://github.com/pexa/bot",
+    "author": "ChainBotMaster",
+    "license": "MIT"
+}
