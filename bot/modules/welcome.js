@@ -18,7 +18,7 @@ exports.onUserJoin = function(bot) {
       timestamp: new Date(),
       footer: {
         icon_url: Bot.iconurl,
-        text: '\u00A9 ' + Bot.name,
+        text: '\u00A9 ' + bot.name,
       },
       author: {
         name: 'Welcome to PexaCoin Discord Community',
@@ -39,7 +39,7 @@ exports.onUserJoin = function(bot) {
       timestamp: new Date(),
       footer: {
         icon_url: Bot.iconurl,
-        text: '\u00A9 ' + Bot.name,
+        text: '\u00A9 ' + bot.name,
       },
 
       fields: [
@@ -72,13 +72,15 @@ exports.welcome = {
           timestamp: new Date(),
           footer: {
             icon_url: Bot.iconurl,
-            text: '\u00A9 ' + Bot.name,
+            text: '\u00A9 ' + bot.name,
           },
           author: {
             name: 'Woops...',
           },
           description:
-            'Command cannot be used in a DM.\nPlease use <#' + genneralChannelId + '>.',
+            'Command cannot be used in a DM.\nPlease use <#' +
+            genneralChannelId +
+            '>.',
         }
         msg.channel.send({
           embed,
@@ -90,7 +92,7 @@ exports.welcome = {
           timestamp: new Date(),
           footer: {
             icon_url: Bot.iconurl,
-            text: '\u00A9 ' + Bot.name,
+            text: '\u00A9 ' + bot.name,
           },
           author: {
             name: 'Woops, Wrong Channel...',
@@ -111,7 +113,7 @@ exports.welcome = {
                 timestamp: new Date(),
                 footer: {
                     icon_url: Bot.iconurl,
-                    text: "\u00A9 " + Bot.name
+                    text: "\u00A9 " + bot.name
                 },
                 author: {
                     name: "Woops..."
@@ -130,7 +132,7 @@ exports.welcome = {
                 timestamp: new Date(),
                 footer: {
                     icon_url: Bot.iconurl,
-                    text: "\u00A9 " + Bot.name
+                    text: "\u00A9 " + bot.name
                 },
                 author: {
                     name: "Woops..."
@@ -147,7 +149,7 @@ exports.welcome = {
       timestamp: new Date(),
       footer: {
         icon_url: Bot.iconurl,
-        text: '\u00A9 ' + Bot.name,
+        text: '\u00A9 ' + bot.name,
       },
       author: {
         name: 'Welcome to the Official PexaCoin Discord.',
@@ -161,8 +163,7 @@ exports.welcome = {
         miningIssues +
         '> if you need technical support.',
       image: {
-        url:
-          'https://github.com/pexa/assets/blob/master/logos/pexa300x300.png',
+        url: 'https://github.com/pexa/assets/blob/master/logos/pexa300x300.png',
       },
     }
     msg.channel.send({
@@ -181,12 +182,11 @@ exports.join = {
       timestamp: new Date(),
       footer: {
         icon_url: Bot.iconurl,
-        text: '\u00A9 ' + Bot.name,
+        text: '\u00A9 ' + bot.name,
       },
       description: 'You Can Join EVEN MORE Channels in <#' + JoinID + '>',
       image: {
-        url:
-          'https://github.com/pexa/assets/blob/master/logos/pexa300x300.png',
+        url: 'https://github.com/pexa/assets/blob/master/logos/pexa300x300.png',
       },
     }
     msg.channel.send({

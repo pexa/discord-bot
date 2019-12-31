@@ -21,7 +21,7 @@ exports.cp = {
         timestamp: new Date(),
         footer: {
           icon_url: Bot.iconurl,
-          text: '\u00A9 ' + Bot.name,
+          text: '\u00A9 ' + bot.name,
         },
         author: {
           name: 'Woops, Wrong Channel...',
@@ -53,7 +53,7 @@ exports.cp = {
           timestamp: new Date(),
           footer: {
             icon_url: Bot.iconurl,
-            text: '\u00A9 ' + Bot.name,
+            text: '\u00A9 ' + bot.name,
           },
           color: 1741945,
           fields: [
@@ -126,7 +126,7 @@ exports.cp = {
               timestamp: new Date(),
               footer: {
                 icon_url: Bot.iconurl,
-                text: '\u00A9 ' + Bot.name,
+                text: '\u00A9 ' + bot.name,
               },
               thumbnail: {
                 url: thumbnail,
@@ -165,7 +165,7 @@ exports.cp = {
             timestamp: new Date(),
             footer: {
               icon_url: Bot.iconurl,
-              text: '\u00A9 ' + Bot.name,
+              text: '\u00A9 ' + bot.name,
             },
             author: {
               name: 'Woops...',
@@ -202,7 +202,7 @@ exports.cp = {
 //           timestamp: new Date(),
 //           footer: {
 //             icon_url: Bot.iconurl,
-//             text: '\u00A9 ' + Bot.name,
+//             text: '\u00A9 ' + bot.name,
 //           },
 //           color: 1741945,
 //           fields: [
@@ -273,7 +273,7 @@ exports.cp = {
 //               timestamp: new Date(),
 //               footer: {
 //                 icon_url: Bot.iconurl,
-//                 text: '\u00A9 ' + Bot.name,
+//                 text: '\u00A9 ' + bot.name,
 //               },
 //               thumbnail: {
 //                 url: thumbnail,
@@ -331,7 +331,7 @@ exports.market = {
           timestamp: new Date(),
           footer: {
             icon_url: Bot.iconurl,
-            text: '' + Bot.name,
+            text: '' + bot.name,
           },
           color: 1741945,
           fields: [
@@ -394,7 +394,7 @@ exports.market = {
           timestamp: new Date(),
           footer: {
             icon_url: Bot.iconurl,
-            text: '\u00A9 ' + Bot.name,
+            text: '\u00A9 ' + bot.name,
           },
           color: 1741945,
           fields: [

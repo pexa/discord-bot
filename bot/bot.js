@@ -224,7 +224,7 @@ bot.on('ready', async function() {
     timestamp: new Date(),
     footer: {
       icon_url: Bot.iconurl,
-      text: '\u00A9 ' + Bot.name,
+      text: '\u00A9 ' + bot.name,
     },
     author: {
       name: 'Join Channels Instruction.',
@@ -241,14 +241,14 @@ bot.on('ready', async function() {
     timestamp: new Date(),
     footer: {
       icon_url: Bot.iconurl,
-      text: '\u00A9 ' + Bot.name,
+      text: '\u00A9 ' + bot.name,
     },
     description:
       '__**[ Pexa General & Chat ]**__ \n\n' +
       '**General**  <:general:594793059841998869> \n\n' +
       '**Off Topic Discussions**  <:offtopic:594796318564679692> \n\n' +
       '**Rain Room**  <:rainroom:661405723795914762> \n\n' +
-      '**Feature Requests**  <:featurerequests:600369815974313989> \n\n'
+      '**Feature Requests**  <:featurerequests:600369815974313989> \n\n',
   }
 
   let msg1 = await bot.channels.get(ChannelID).send({
@@ -265,12 +265,12 @@ bot.on('ready', async function() {
     timestamp: new Date(),
     footer: {
       icon_url: Bot.iconurl,
-      text: '\u00A9 ' + Bot.name,
+      text: '\u00A9 ' + bot.name,
     },
     description:
       '__**[ Pexa Development ]**__ \n\n' +
       '**Github-updates**  <:github:628933251347775500> \n\n' +
-      '**Development**  <:dev:628933251347775500> \n\n'
+      '**Development**  <:dev:628933251347775500> \n\n',
   }
 
   let msg2 = await bot.channels.get(ChannelID).send({

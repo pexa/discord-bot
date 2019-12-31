@@ -26,7 +26,7 @@ exports.timedhash = function(bot) {
           timestamp: new Date(),
           footer: {
             icon_url: Bot.iconurl,
-            text: '\u00A9 ' + Bot.name,
+            text: '\u00A9 ' + bot.name,
           },
           fields: [
             {
@@ -55,7 +55,7 @@ exports.timedhash = function(bot) {
               timestamp: new Date(),
               footer: {
                 icon_url: Bot.iconurl,
-                text: '\u00A9 ' + Bot.name,
+                text: '\u00A9 ' + bot.name,
               },
               fields: [
                 {
@@ -102,7 +102,7 @@ exports.hash = {
         timestamp: new Date(),
         footer: {
           icon_url: Bot.iconurl,
-          text: '\u00A9 ' + Bot.name,
+          text: '\u00A9 ' + bot.name,
         },
         author: {
           name: 'Woops, Wrong Channel...',
@@ -153,7 +153,7 @@ exports.hash = {
             timestamp: new Date(),
             footer: {
               icon_url: Bot.iconurl,
-              text: '\u00A9 ' + Bot.name,
+              text: '\u00A9 ' + bot.name,
             },
             fields: [
               {
@@ -180,7 +180,7 @@ exports.hash = {
                     timestamp: new Date(),
                     footer: {
                       icon_url: Bot.iconurl,
-                      text: '\u00A9 ' + Bot.name,
+                      text: '\u00A9 ' + bot.name,
                     },
                     fields: [
                       {
@@ -223,7 +223,7 @@ exports.hash = {
             timestamp: new Date(),
             footer: {
               icon_url: Bot.iconurl,
-              text: '\u00A9 ' + Bot.name,
+              text: '\u00A9 ' + bot.name,
             },
             fields: [
               {
@@ -325,7 +325,7 @@ exports.hash = {
                 timestamp: new Date(),
                 footer: {
                   icon_url: Bot.iconurl,
-                  text: '\u00A9 ' + Bot.name,
+                  text: '\u00A9 ' + bot.name,
                 },
                 author: {
                   name: author1,

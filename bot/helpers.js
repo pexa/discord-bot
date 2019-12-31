@@ -3,7 +3,9 @@ let role = config.get('role')
 
 // Checks if user is allowed to use a command only for Pexan user
 exports.hasPermsPexan = function(msg) {
-  return msg.member.roles.some(r => role.pexan.includes(r.name) || role.communityLeader.includes(r.name))
+  return msg.member.roles.some(
+    r => role.pexan.includes(r.name) || role.communityLeader.includes(r.name)
+  )
 }
 
 // Checks if user is allowed to use a command only for Support user

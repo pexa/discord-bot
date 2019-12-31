@@ -330,53 +330,55 @@ exports.withdraw = {
           .then((txid, error) => {
             if (error) {
               console.log(error)
-              return
-            } else {
-              const embed = {
-                color: 1741945,
-                timestamp: new Date(),
-                footer: {
-                  icon_url: bot.iconurl,
-                  text: '\u00A9 ' + bot.name,
-                },
-                author: {
-                  name: 'Withdraw successfully',
-                },
-                description:
-                  "Here's your transaction id " +
-                  txid +
-                  '\n[**Block explorer**](' +
-                  explorer +
-                  txid +
-                  ')',
-              }
-              msg.author.send({
-                embed,
-              })
-
-              pexaDaemon.getBalance(msg.author.id, 1).then((after, error) => {
-                let txfee =
-                  parseFloat(before) - parseFloat(words[1]) - parseFloat(after)
-                let servicesfee = 0.1 - txfee.toFixed(8)
-                pexaDaemon
-                  .move(
-                    msg.author.id,
-                    'services fee',
-                    servicesfee,
-                    1,
-                    'services fee'
-                  )
-                  .then(result => {
-                    if (result == true) {
-                      console.log(
-                        'Earn Services Fee: ' + servicesfee + ' ' + symbol
-                      )
-                      return
-                    }
-                    return
-                  })
-              })
             }
+
+            const embed = {
+              color: 1741945,
+              timestamp: new Date(),
+              footer: {
+                icon_url: bot.iconurl,
+                text: '\u00A9 ' + bot.name,
+              },
+              author: {
+                name: 'Withdraw successfully',
+              },
+              description:
+                "Here's your transaction id " +
+                txid +
+                '\n[**Block explorer**](' +
+                explorer +
+                txid +
+                ')',
+            }
+            msg.author.send({
+              embed,
+            })
+
+            pexaDaemon.getBalance(msg.author.id, 1).then((after, error) => {
+              let txfee =
+                parseFloat(before) - parseFloat(words[1]) - parseFloat(after)
+              let servicesfee = 0.1 - txfee.toFixed(8)
+              pexaDaemon
+                .move(
+                  msg.author.id,
+                  'services fee',
+                  servicesfee,
+                  1,
+                  'services fee'
+                )
+                .then(result => {
+                  if (result == true) {
+                    console.log(
+                      'Earn Services Fee: ' + servicesfee + ' ' + symbol
+                    )
+                    return
+                  }
+                  return
+                })
+            })
+          })
+          .catch((txid, error) => {
+            console.log('Handeling promise rejection', txid, error)
           })
       } else {
         const embed = {
@@ -565,7 +567,7 @@ exports.tip = {
                     msg.author.id +
                     '> Sent **' +
                     words[1] +
-                    '** ' +
+                    ' PEXA** ' +
                     symbol +
                     ' to: <@' +
                     msg.mentions.members.first().id +

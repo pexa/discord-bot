@@ -18,5 +18,3 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN yarn && yarn build
 
 ENTRYPOINT [ "docker-entrypoint.sh" ]
-
-CMD [ "yarn", "prod" ]

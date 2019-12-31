@@ -4,12 +4,7 @@ let needle = require('needle')
 let Bot = config.get('bot')
 let supportChannel = config.get('Channels').support
 
-exports.commands = [
-  'info',
-  'specs',
-  'roadmap',
-  'beer',
-]
+exports.commands = ['info', 'specs', 'roadmap', 'beer']
 
 exports.info = {
   usage: ' ',
@@ -20,7 +15,7 @@ exports.info = {
       timestamp: new Date(),
       footer: {
         icon_url: Bot.iconurl,
-        text: '\u00A9 ' + Bot.name,
+        text: '\u00A9 ' + bot.name,
       },
       fields: [
         {
@@ -75,7 +70,7 @@ exports.specs = {
       timestamp: new Date(),
       footer: {
         icon_url: Bot.iconurl,
-        text: '\u00A9 ' + Bot.name,
+        text: '\u00A9 ' + bot.name,
       },
       fields: [
         {
@@ -124,7 +119,7 @@ exports.specs = {
 //       timestamp: new Date(),
 //       footer: {
 //         icon_url: Bot.iconurl,
-//         text: '\u00A9 ' + Bot.name,
+//         text: '\u00A9 ' + bot.name,
 //       },
 //       fields: [
 //         {
@@ -172,13 +167,12 @@ exports.roadmap = {
       timestamp: new Date(),
       footer: {
         icon_url: Bot.iconurl,
-        text: '\u00A9 ' + Bot.name,
+        text: '\u00A9 ' + bot.name,
       },
       fields: [
         {
           name: 'View public roadmap:',
-          value:
-            'https://pexaproject.com/roadmap/board/pexa-pool/',
+          value: 'https://pexaproject.com/roadmap/board/pexa-pool/',
         },
       ],
     }
@@ -197,7 +191,7 @@ exports.beer = {
       timestamp: new Date(),
       footer: {
         icon_url: Bot.iconurl,
-        text: '\u00A9 ' + Bot.name,
+        text: '\u00A9 ' + bot.name,
       },
       description: 'Cheers! :beers:',
     }
